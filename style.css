@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+      font-family: "Roboto", sans-serif;
+
+}
+header{
+    background-color: #e7eafd;
+    .container{
+        ul{
+            position: relative;
+            @media screen and (max-width:992px) {
+                display: none;
+            }
+            li{
+                cursor: pointer;
+                &:hover{
+                    color:#243be6 ;
+                }
+            }
+            #second{
+                position: relative;
+                #menu{
+                    height: 230px;
+                    width: 167px;
+                    background-color: #f2f2f2;
+                    position: absolute;
+                    top: 30px;
+                    left: -23px;
+                    display: none;
+                    &:hover{
+                        color: black;
+                    }
+                    a{
+                        padding-left:1rem ;
+                        height: calc(100% / 6);
+                        display: flex;
+                        align-items: center;
+                        color: black;
+                        &:hover{
+                            color: white;
+                            background-color: #243be6;
+                        }
+                    }
+                }
+                &:hover{
+                    #menu{
+                        display: block;
+                    }
+                }
+                
+
+            }
+
+
+        }
+    }
+}
+
+main{
+    .container{
+        flex-direction: row;
+        @media screen and (max-width:992px) {
+            flex-direction: column;
+        }        
+        .first{
+            width: 50%;
+            @media screen and (max-width:992px) {
+                width: 100%;
+            }
+            p{
+                font-size: clamp(3rem,10%,4.5rem);
+            }
+        }
+        .second{
+            width: 50%;
+            @media screen and (max-width:992px) {
+                width: 100%;
+                p{
+                    font-size: 1rem;
+                }
+            }   
+        
+        }
+    }
+}
+.boxs{
+    .box{
+        height: 280px;
+        width: 350px;
+        background-color: #f2f2f2;
+        border-radius: 3rem;
+        @media screen and (min-width:992px) and (max-width:1200px) {
+            width: 300px;;
+        }
+        @media screen and (min-width:767px) and (max-width:992px) {
+            width: 340px;
+        }
+        @media screen and (max-width:767px){
+            width: 100%;
+        }
+        .circle{
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            background-color: #243be6;
+        }
+    }
+}
